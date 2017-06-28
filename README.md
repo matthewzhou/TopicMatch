@@ -7,8 +7,7 @@ TopicMatch is a distributed data pipeline for topic clustering on streaming text
   2. Apache Kafka (Kafka-python - http://kafka-python.readthedocs.io/en/master/install.html)
   3. Spark Streaming (Pyspark - https://spark.apache.org/docs/latest/streaming-programming-guide.html)
   4. Neo4j (https://neo4j.com/download/)
-  5. Mazerunner (https://github.com/neo4j-contrib/neo4j-mazerunner)
-  6. Flask (http://flask.pocoo.org/)
+  5. Flask (http://flask.pocoo.org/)
 
 * ![Overview](./pipeline.png)
 
@@ -18,5 +17,5 @@ TopicMatch is a distributed data pipeline for topic clustering on streaming text
   3. Kafka cluster has 3 nodes -- distributing ingestion and controlling throughput for constant data production volume.
   4. Spark Streaming consumes from the Kafka cluster with 1 master/3 workers and pre-processes/aggregates tweets. 
   5. Spark Streaming outputs are directed back to Kafka as a central broker which are consumed through batch Neo4j Cypher queries for          graphDB storage. Overall tweet counts and trending hashtags are delivered straight to Flask from Kafka for dashboard visualization.
-  6. Neo4j processes the latest 1 minute window of graph data to isolate clusters through triangle counting in Mazerunner (Neo4j-Spark          GraphX connector).
+  6. Neo4j searches for nodes and returns the node with its top 5 edges. 
   
