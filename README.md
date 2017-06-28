@@ -10,7 +10,7 @@ TopicMatch is a distributed data pipeline for topic clustering on streaming text
   5. Mazerunner (https://github.com/neo4j-contrib/neo4j-mazerunner)
   6. Flask (http://flask.pocoo.org/)
 
-* ![Overview](./images/pipeline.png)
+* ![Overview](./pipeline.png)
 
 # Pipeline
   1. Twitter data producers compiled from a static bank of ~3 million tweet JSON objects saved in S3. 
