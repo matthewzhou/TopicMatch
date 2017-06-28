@@ -7,4 +7,3 @@ CLUSTER_NAME=$(<00cluster_name.txt)
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 peg up ${MYDIR}/master.yml &
 peg up ${MYDIR}/workers.yml &
-peg up ${MYDIR}/db.yml &
